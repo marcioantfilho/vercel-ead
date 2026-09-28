@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minicurso sobre automação de rotinas docentes na Educação a Distância, com videoaula e avaliação interativa.">
+  <meta property="og:title" content="Automação de Rotinas Docentes na EaD">
+  <meta property="og:description" content="Do processo manual ao fluxo automatizado, com supervisão humana.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#174f54">
+  <title>Automação de Rotinas Docentes na EaD</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <span class="brand-mark" aria-hidden="true">AR</span>
+        <span>Minicurso EaD</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <nav id="menu-principal" class="nav" aria-label="Navegação principal">
+        <a href="#sobre">Apresentação</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#conceitos">Conceitos</a>
+        <a href="#exemplo">Exemplo</a>
+        <a href="#videoaula">Videoaula</a>
+        <a href="#avaliacao">Avaliação</a>
+        <a href="#referencias">Referências</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Docência Digital na Era da IA</p>
+          <h1 id="titulo-principal">Automação de Rotinas Docentes na EaD</h1>
+          <p class="hero-subtitle">Do processo manual ao fluxo automatizado</p>
+          <p class="hero-text">Aprenda a identificar tarefas repetitivas, estruturar fluxos e compreender como ferramentas de automação podem auxiliar atividades docentes sem eliminar a supervisão humana.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#videoaula">Assistir à videoaula</a>
+            <a class="button button-secondary" href="#avaliacao">Fazer avaliação</a>
+          </div>
+        </div>
+        <aside class="principle-card" aria-label="Princípio central do minicurso">
+          <span class="card-label">Princípio central</span>
+          <blockquote>“Primeiro compreenda o processo. Depois automatize.”</blockquote>
+          <p>Automatizar significa reduzir trabalho mecânico e preservar o julgamento pedagógico.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="study-path" aria-label="Sequência recomendada de estudo">
+      <div class="container path-grid">
+        <a href="#problema"><span>Etapa 1</span>Compreenda o problema</a>
+        <a href="#videoaula"><span>Etapa 2</span>Assista à demonstração</a>
+        <a href="#avaliacao"><span>Etapa 3</span>Teste seus conhecimentos</a>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container reading-width">
+        <p class="section-kicker">Apresentação</p>
+        <h2>Sobre o minicurso</h2>
+        <p>Em atividades de Educação a Distância, professores e tutores frequentemente realizam tarefas repetitivas, como registrar respostas, organizar informações, verificar dados incompletos e atualizar planilhas. Quando essas tarefas seguem regras previsíveis, parte do processo pode ser automatizada.</p>
+        <p>Este minicurso apresenta uma abordagem prática para analisar uma rotina docente, transformá-la em um fluxo estruturado e compreender como uma ferramenta como o n8n pode executar etapas automaticamente, mantendo a revisão humana em situações que exigem interpretação ou decisão pedagógica.</p>
+        <div class="callout"><strong>Objetivo geral:</strong> compreender como tarefas repetitivas presentes na rotina docente da Educação a Distância podem ser identificadas, estruturadas e automatizadas, mantendo pontos adequados de supervisão humana.</div>
+      </div>
+    </section>
+
+    <section class="section section-muted" aria-labelledby="perfil-title">
+      <div class="container two-column" id="perfil-title">
+        <article>
+          <p class="section-kicker">Para quem</p>
+          <h2>Público-alvo</h2>
+          <p>Este minicurso é destinado a professores, tutores, estudantes de licenciatura e profissionais envolvidos com Educação a Distância que desejam compreender como tarefas docentes repetitivas podem ser organizadas e parcialmente automatizadas por meio de ferramentas de automação de fluxos.</p>
+        </article>
+        <article>
+          <p class="section-kicker">Ponto de partida</p>
+          <h2>Conhecimentos prévios</h2>
+          <p>Não são necessários conhecimentos de programação. Recomenda-se apenas familiaridade básica com formulários digitais, planilhas eletrônicas e atividades comuns da rotina docente em ambientes virtuais de aprendizagem.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="objetivos">
+      <div class="container">
+        <p class="section-kicker">Resultados esperados</p>
+        <h2>Objetivos de aprendizagem</h2>
+        <p class="section-intro">Ao final do minicurso, o participante deverá ser capaz de:</p>
+        <ol class="objective-list">
+          <li><span>01</span>Identificar tarefas repetitivas da rotina docente que podem ser candidatas à automação.</li>
+          <li><span>02</span>Representar uma rotina como um fluxo, distinguindo entradas, etapas de processamento, resultados e pontos de revisão humana.</li>
+          <li><span>03</span>Compreender como construir uma automação simples integrando formulário e planilha utilizando n8n.</li>
+          <li><span>04</span>Testar e identificar falhas em um fluxo automatizado.</li>
+          <li><span>05</span>Reconhecer atividades que não devem ser completamente automatizadas, especialmente quando exigem julgamento pedagógico.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="problema">
+      <div class="container">
+        <p class="section-kicker">Etapa 1 — Compreenda o problema</p>
+        <h2>O custo das tarefas repetitivas</h2>
+        <div class="two-column align-start">
+          <div>
+            <p>Imagine um professor responsável por uma turma com dezenas de estudantes. Toda semana ele recebe formulários, copia informações para uma planilha, verifica campos vazios, organiza registros por turma e prepara essas informações para acompanhamento.</p>
+            <p>Individualmente, cada tarefa pode levar poucos minutos. Quando esse processo é repetido dezenas ou centenas de vezes, o custo de tempo aumenta significativamente.</p>
+          </div>
+          <div class="task-sequence" aria-label="Sequência de tarefas repetitivas">
+            <span>Receber respostas</span><span>Copiar dados</span><span>Conferir campos</span><span>Organizar registros</span><span>Revisar exceções</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="conceitos">
+      <div class="container">
+        <p class="section-kicker">Critérios de análise</p>
+        <h2>Quando uma tarefa é candidata à automação?</h2>
+        <div class="criteria-grid">
+          <article><span aria-hidden="true">01</span><h3>A tarefa se repete?</h3><p>É repetitiva quando é executada várias vezes de maneira semelhante.</p></article>
+          <article><span aria-hidden="true">02</span><h3>As regras são previsíveis?</h3><p>Regras previsíveis permitem definir condições objetivas para o fluxo.</p></article>
+          <article><span aria-hidden="true">03</span><h3>As entradas têm estrutura?</h3><p>Entradas estruturadas possuem campos conhecidos, como nome, e-mail, turma e atividade.</p></article>
+          <article><span aria-hidden="true">04</span><h3>O resultado é verificável?</h3><p>Deve ser possível confirmar se a automação funcionou corretamente.</p></article>
+        </div>
+        <div class="callout warning"><strong>Atenção:</strong> uma tarefa repetitiva não é automaticamente uma boa candidata à automação. O processo precisa ser compreendido antes de ser automatizado.</div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <p class="section-kicker">Limites responsáveis</p>
+        <h2>O que automatizar e o que preservar sob decisão humana</h2>
+        <div class="comparison">
+          <article class="comparison-card positive"><h3>Boas candidatas à automação</h3><ul><li>Registrar respostas de formulários</li><li>Organizar informações em planilhas</li><li>Verificar campos ausentes</li><li>Classificar registros segundo regras objetivas</li><li>Gerar listas</li><li>Enviar notificações administrativas</li><li>Atualizar registros</li></ul></article>
+          <article class="comparison-card human"><h3>Maior intervenção humana</h3><ul><li>Avaliar uma reflexão subjetiva</li><li>Interpretar dificuldades individuais</li><li>Decidir sobre situações pedagógicas complexas</li><li>Avaliar o contexto excepcional de um estudante</li><li>Tomar decisões educacionais relevantes</li></ul></article>
+        </div>
+        <div class="statement"><strong>Automatizar não é abandonar o controle.</strong><span>Quanto maior a necessidade de interpretação, contexto e julgamento, maior deve ser a participação humana.</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">Modelo conceitual</p>
+        <h2>Estrutura de um fluxo</h2>
+        <div class="flow" aria-label="Entrada, regras, processamento, saída e revisão humana">
+          <div><strong>Entrada</strong><small>Dados recebidos</small></div><i aria-hidden="true">→</i><div><strong>Regras</strong><small>Condições definidas</small></div><i aria-hidden="true">→</i><div><strong>Processamento</strong><small>Ações automáticas</small></div><i aria-hidden="true">→</i><div><strong>Saída</strong><small>Resultado produzido</small></div><i aria-hidden="true">→</i><div class="human-step"><strong>Revisão humana</strong><small>Exceções e decisões</small></div>
+        </div>
+        <div class="definition-grid">
+          <article><h3>Entrada</h3><p>Dados recebidos pelo processo, como nome, e-mail, turma e atividade.</p></article>
+          <article><h3>Processamento</h3><p>Ações automáticas para receber, verificar, transformar e registrar.</p></article>
+          <article><h3>Saída</h3><p>Resultado produzido, como um registro organizado em planilha.</p></article>
+          <article><h3>Revisão humana</h3><p>Verificação de resultados, exceções e decisões que não devem ser totalmente automatizadas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="exemplo">
+      <div class="container">
+        <p class="section-kicker">Aplicação prática</p>
+        <h2>Do formulário à planilha</h2>
+        <p class="section-intro">Um professor oferece uma atividade complementar. Os estudantes informam nome, e-mail, turma, atividade escolhida e confirmação de envio. O fluxo recebe, valida, organiza, registra e sinaliza exceções para revisão.</p>
+        <div class="flow compact" aria-label="Fluxo do exemplo prático">
+          <div><strong>Formulário</strong></div><i aria-hidden="true">→</i><div><strong>Nova resposta</strong></div><i aria-hidden="true">→</i><div><strong>Validação</strong></div><i aria-hidden="true">→</i><div><strong>Planilha</strong></div><i aria-hidden="true">→</i><div><strong>Classificação</strong></div><i aria-hidden="true">→</i><div class="human-step"><strong>Revisão</strong></div>
+        </div>
+        <div class="table-wrap" tabindex="0" aria-label="Tabela rolável com dados fictícios">
+          <table><caption>Exemplo de registros fictícios</caption><thead><tr><th>Nome</th><th>E-mail</th><th>Turma</th><th>Atividade</th></tr></thead><tbody><tr><td>Ana Souza</td><td>ana.exemplo@email.com</td><td>EaD-A</td><td>Atividade 1</td></tr><tr><td>Carlos Lima</td><td>carlos.exemplo@email.com</td><td>EaD-B</td><td>Atividade 2</td></tr><tr><td>João Silva</td><td>joao.exemplo@email.com</td><td>EaD-A</td><td>Atividade 1</td></tr></tbody></table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">Demonstração com n8n</p>
+        <h2>Como a automação organiza o caminho</h2>
+        <p>A videoaula demonstra conceitualmente um gatilho que inicia o fluxo, uma etapa que prepara os campos e uma condição que verifica sua validade. Dados válidos seguem para registro; dados inválidos, para tratamento.</p>
+        <div class="branch-flow" aria-label="Fluxo conceitual no n8n">
+          <div class="branch-start"><span>Form Trigger</span><span>Edit Fields<br><small>preparação dos dados</small></span><span>IF<br><small>condição</small></span></div>
+          <div class="branches"><div><b>Válido</b><span>Google Sheets</span></div><div><b>Inválido</b><span>Tratamento de erro</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="falhas">
+      <div class="container">
+        <p class="section-kicker">Testar é parte do projeto</p>
+        <h2>Como identificar falhas</h2>
+        <div class="test-grid">
+          <article class="test-card success"><h3>Teste de sucesso</h3><dl><dt>Nome</dt><dd>Ana Souza</dd><dt>E-mail</dt><dd>ana@example.com</dd><dt>Turma</dt><dd>EaD-A</dd><dt>Atividade</dt><dd>Atividade 1</dd></dl><p><strong>Resultado esperado:</strong> registro validado e inserido corretamente na planilha.</p></article>
+          <article class="test-card error"><h3>Teste de falha</h3><dl><dt>Nome</dt><dd>Carlos Lima</dd><dt>E-mail</dt><dd>[vazio]</dd><dt>Turma</dt><dd>EaD-B</dd><dt>Atividade</dt><dd>Atividade 2</dd></dl><p><strong>Resultado esperado:</strong> ausência detectada e registro encaminhado para tratamento.</p></article>
+        </div>
+        <p class="section-intro">Um processo automatizado não deve ser testado apenas quando tudo funciona. Também é necessário verificar como ele reage a dados incompletos, inesperados ou inválidos.</p>
+        <div class="logic-note"><h3>Falha técnica × falha lógica</h3><p>Uma automação pode concluir sua execução sem apresentar erro técnico e ainda assim produzir um resultado incorreto — por exemplo, inserir o nome do estudante na coluna errada.</p><strong>Execução concluída não significa necessariamente resultado correto.</strong></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">Responsabilidade pedagógica</p>
+        <h2>A revisão humana fecha o ciclo</h2>
+        <div class="flow review-flow" aria-label="Da automação à decisão do professor"><div><strong>Automação</strong></div><i aria-hidden="true">→</i><div><strong>Planilha organizada</strong></div><i aria-hidden="true">→</i><div><strong>Registros sinalizados</strong></div><i aria-hidden="true">→</i><div class="human-step"><strong>Professor</strong><small>Decisão</small></div></div>
+        <p class="section-intro">A automação pode reduzir o trabalho mecânico, mas o professor permanece responsável pela interpretação de situações pedagógicas, análise de exceções e decisões que exigem contexto.</p>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="videoaula">
+      <div class="container">
+        <p class="section-kicker">Etapa 2 — Assista à demonstração</p>
+        <h2>Videoaula</h2>
+        <p>Observe como o processo é mapeado e como os testes ajudam a validar o fluxo antes de seu uso.</p>
+        <div class="video-layout">
+          <div>
+            <!-- Substitua VIDEO_ID pelo identificador do seu vídeo no YouTube. O vídeo final deve possuir legendas revisadas no YouTube. -->
+            <div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Videoaula: Automação de Rotinas Docentes na EaD" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <p class="video-duration">Duração prevista: aproximadamente 25 minutos.</p>
+          </div>
+          <div class="chapters" aria-label="Capítulos da videoaula"><h3>Capítulos</h3><ol><li><time>00:00</time>Introdução</li><li><time>01:30</time>O problema das tarefas repetitivas</li><li><time>04:00</time>Quando automatizar</li><li><time>07:00</time>Estruturando um fluxo</li><li><time>10:00</time>Exemplo prático</li><li><time>12:00</time>Demonstração no n8n</li><li><time>19:00</time>Testes e falhas</li><li><time>22:00</time>Revisão humana</li><li><time>24:00</time>Síntese</li></ol></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="avaliacao">
+      <div class="container quiz-section">
+        <p class="section-kicker">Etapa 3 — Teste seus conhecimentos</p>
+        <h2>Avaliação interativa</h2>
+        <p class="section-intro">Responda às 10 questões. Verifique cada resposta para receber uma explicação antes de avançar.</p>
+        <div class="quiz" id="quiz-app">
+          <div id="quiz-content">
+            <div class="quiz-top"><p id="question-count">Questão 1 de 10</p><p id="score-status" aria-live="polite">0 acertos</p></div>
+            <div class="progress-track" role="progressbar" aria-label="Progresso da avaliação" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1"><span id="progress-bar"></span></div>
+            <form id="quiz-form">
+              <fieldset id="question-fieldset"><legend id="question-text"></legend><div id="answers" class="answers"></div></fieldset>
+              <p id="selection-message" class="selection-message" role="alert" hidden>Selecione uma alternativa antes de verificar.</p>
+              <div id="feedback" class="feedback" role="status" aria-live="polite" tabindex="-1" hidden></div>
+              <div class="quiz-actions"><button class="button button-primary" id="check-answer" type="submit">Verificar resposta</button><button class="button button-primary" id="next-question" type="button" hidden>Próxima questão</button></div>
+            </form>
+          </div>
+          <div id="quiz-result" class="quiz-result" hidden tabindex="-1">
+            <p class="result-label">Avaliação concluída</p><h3>Seu resultado</h3><p class="result-score"><strong id="final-score">0 de 10</strong><span id="final-percentage">0%</span></p><p id="result-message"></p><button class="button button-primary" id="restart-quiz" type="button">Refazer avaliação</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="referencias">
+      <div class="container two-column align-start">
+        <aside class="author-card"><h3>Identificação</h3><dl><dt>Autor</dt><dd>Marcio A. Silva Filho</dd><dt>Disciplina</dt><dd>Educação a Distância</dd><dt>Instituição</dt><dd>UFRPE</dd><dt>Período</dt><dd>2026.2</dd></dl></aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><p>Automação de Rotinas Docentes na EaD</p><p>Minicurso acadêmico · 2026.2</p></div></footer>
+  <a class="back-to-top" href="#topo" aria-label="Voltar ao topo" hidden>↑</a>
+</body>
+</html>
