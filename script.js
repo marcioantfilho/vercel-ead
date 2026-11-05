@@ -15,6 +15,9 @@ const menuToggle=document.querySelector(".menu-toggle");const nav=document.query
 menuToggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));menuToggle.querySelector(".sr-only").textContent=open?"Fechar menu":"Abrir menu";document.body.classList.toggle("menu-open",open)});
 nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");document.body.classList.remove("menu-open")}));
 
+// eBook: enquanto o link não for colado no index.html, mostra um aviso no lugar de um quadro quebrado
+document.querySelectorAll("[data-ebook-link]").forEach(el=>{const url=el.getAttribute("href")||el.getAttribute("src")||"";if(!url.startsWith("http")){if(el.tagName==="IFRAME"){el.closest(".ebook-frame").hidden=true;document.querySelector(".ebook-pending").hidden=false}else{el.setAttribute("aria-disabled","true");el.removeAttribute("href");el.classList.add("is-disabled")}}});
+
 const backToTop=document.querySelector(".back-to-top");window.addEventListener("scroll",()=>{backToTop.hidden=window.scrollY<650},{passive:true});
 const observedSections=[...document.querySelectorAll("main section[id]")];const navLinks=[...nav.querySelectorAll("a")];
 if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(link=>link.classList.toggle("active",link.getAttribute("href")===`#${entry.target.id}`))}})},{rootMargin:"-25% 0px -65% 0px"});observedSections.forEach(section=>observer.observe(section))}
